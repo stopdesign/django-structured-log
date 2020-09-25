@@ -1,10 +1,6 @@
-https://github.com/stopdesign/django-structured-log/{current-commit-id}/README.md
+## Structured log for Django in Google Cloud Run
 
-https://raw.githubusercontent.com/stopdesign/django-structured-log/{current-commit-id}/img/example.png
-
-![Usage example](https://raw.githubusercontent.com/stopdesign/django-structured-log/{current-commit-id}/img/example.png)
-
-![Usage example 1](https://raw.githubusercontent.com/stopdesign/django-structured-log/master/img/example.png)
+![Usage example](https://raw.githubusercontent.com/stopdesign/django-structured-log/master/img/example.png)
 
 ### Add cloudrun_log to INSTALLED_APPS
 ```.python
