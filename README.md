@@ -1,3 +1,7 @@
+## Structured log for Django in Google Cloud Run
+
+![Usage example](https://raw.githubusercontent.com/stopdesign/django-structured-log/master/img/example.png)
+
 ### Add cloudrun_log to INSTALLED_APPS
 ```.python
 INSTALLED_APPS = [
