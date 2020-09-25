@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="structured-log", # Replace with your own username
+    name="structured-log",
     version="0.0.1",
     author="Gregory Zhizhilkin",
     author_email="gregory@stopdesign.ru",
