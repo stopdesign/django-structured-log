@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="structured-log",
-    version="0.0.1",
+    name="structured_log",
+    version="0.1.0",
     author="Gregory Zhizhilkin",
     author_email="gregory@stopdesign.ru",
-    description="A small example package",
+    description="Google Cloud structured log formater for Django",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/stopdesign/django-structured-log",
