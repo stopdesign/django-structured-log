@@ -33,7 +33,8 @@ class GoogleCloudFormatter(logging.Formatter):
 
         # Get message only for custom log events
         if record.getMessage() and not getattr(record, "exc_info", None):
-            event["message"] = record.getMessage()
+            if record.name != "django.request":
+                event["message"] = record.getMessage()
 
         if request_meta:
             # Full request URI

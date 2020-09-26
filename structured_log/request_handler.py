@@ -39,7 +39,12 @@ class WSGIHandler(wsgi.WSGIHandler):
             level = "debug"
 
         log_response(
-            "", level=level, response=response, request=request,
+            "%s: %s",
+            response.reason_phrase,
+            request.path,
+            level=level,
+            response=response,
+            request=request,
         )
 
         return response

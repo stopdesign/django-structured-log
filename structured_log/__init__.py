@@ -1,8 +1,11 @@
 import threading
 import django.utils.log
+from .wsgi import get_wsgi_application
 
 
 local = threading.local()
+
+__all__ = ["local", "get_wsgi_application"]
 
 
 # Add content length to log records
