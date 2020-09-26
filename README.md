@@ -48,6 +48,27 @@ Add filter, formater and handler. Use handler for logging.
 }
 ```
 
+### [OPTIONAL] Human-readable logs in local environment
+You can use another log formater for your local environment:
+```.python
+from .settings import DEBUG
+if DEBUG:
+    log_formatter = "color_console"
+else:
+    log_formatter = "cloudrun"
+```
+```.python
+"handlers": {
+    "console": {
+        "level": "DEBUG",
+        "class": "logging.StreamHandler",
+        "stream": sys.stdout,
+        "formatter": log_formatter,
+        "filters": ["request_info"],
+    },
+},
+```
+
 ### WSGIHandler
 Replace get_wsgi_application import in wsgi.py.
 ```.python
