@@ -2,11 +2,11 @@
 
 ![Usage example](https://raw.githubusercontent.com/stopdesign/django-structured-log/master/img/example.png)
 
-### Add cloudrun_log to INSTALLED_APPS
+### Add structured_log to INSTALLED_APPS
 ```.python
 INSTALLED_APPS = [
     ...
-    "cloudrun_log",
+    "structured_log",
     ...
 ]
 ```
@@ -16,12 +16,12 @@ Add filter, formater and handler. Use handler for logging.
 ```.python
 "filters": {
     "request_info": {
-        "()": "cloudrun_log.filters.RequestInfoFilter"
+        "()": "structured_log.filters.RequestInfoFilter"
     }
 },
 "formatters": {
     "cloudrun": {
-        "()": "cloudrun_log.formaters.GoogleCloudFormatter"
+        "()": "structured_log.formaters.GoogleCloudFormatter"
     },
 },
 "handlers": {
@@ -49,15 +49,14 @@ Add filter, formater and handler. Use handler for logging.
 ```
 
 ### WSGIHandler
-Replace WSGIHandler in wsgi.py.
+Replace get_wsgi_application import in wsgi.py.
 ```.python
 import os
-import django
-from cloudrun_log.request_handler import WSGIHandler
+
+from structured_log import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
 
-django.setup(set_prefix=False)
 application = WSGIHandler()
 ```
 
