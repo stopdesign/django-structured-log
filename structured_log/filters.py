@@ -1,5 +1,5 @@
 import logging
-from cloudrun_log import local
+from structured_log import local
 
 
 class RequestInfoFilter(logging.Filter):

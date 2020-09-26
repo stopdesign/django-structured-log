@@ -3,7 +3,7 @@ from django.conf import settings
 from django.core.handlers import wsgi
 from django.urls import set_urlconf
 from django.utils.log import log_response
-from cloudrun_log import local
+from structured_log import local
 
 
 class WSGIRequest(wsgi.WSGIRequest):
